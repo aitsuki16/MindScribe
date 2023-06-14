@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		CE985FF62A34A14700864E81 /* DiaryEntryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE985FF42A34A14700864E81 /* DiaryEntryModel.xcdatamodeld */; };
 		CE985FFC2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */; };
-		CE9860002A35701300864E81 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFF2A35701300864E81 /* PersistenceController.swift */; };
-		CE9860022A35B12500864E81 /* CodeData+ClassProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9860012A35B12400864E81 /* CodeData+ClassProperties.swift */; };
+		CE9860002A35701300864E81 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFF2A35701300864E81 /* CoreDataRepository.swift */; };
+		CE98CEE72A39872100685035 /* DiaryEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98CEE62A39872100685035 /* DiaryEntry+CoreDataClass.swift */; };
 		CEA433ED2A32BC99006B1077 /* mindScribeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA433EC2A32BC99006B1077 /* mindScribeApp.swift */; };
 		CEA433EF2A32BC99006B1077 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA433EE2A32BC99006B1077 /* ContentView.swift */; };
 		CEA433F12A32BC9B006B1077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA433F02A32BC9B006B1077 /* Assets.xcassets */; };
@@ -43,8 +43,8 @@
 /* Begin PBXFileReference section */
 		CE985FF52A34A14700864E81 /* DiaryEntryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryEntryModel.xcdatamodel; sourceTree = "<group>"; };
 		CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CE985FFF2A35701300864E81 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		CE9860012A35B12400864E81 /* CodeData+ClassProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodeData+ClassProperties.swift"; sourceTree = "<group>"; };
+		CE985FFF2A35701300864E81 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
+		CE98CEE62A39872100685035 /* DiaryEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CEA433E92A32BC99006B1077 /* mindScribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindScribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA433EC2A32BC99006B1077 /* mindScribeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindScribeApp.swift; sourceTree = "<group>"; };
 		CEA433EE2A32BC99006B1077 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,9 +88,9 @@
 		CEA433E02A32BC99006B1077 = {
 			isa = PBXGroup;
 			children = (
-				CE9860012A35B12400864E81 /* CodeData+ClassProperties.swift */,
+				CE98CEE62A39872100685035 /* DiaryEntry+CoreDataClass.swift */,
 				CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */,
-				CE985FFF2A35701300864E81 /* PersistenceController.swift */,
+				CE985FFF2A35701300864E81 /* CoreDataRepository.swift */,
 				CE985FF42A34A14700864E81 /* DiaryEntryModel.xcdatamodeld */,
 				CEA433EC2A32BC99006B1077 /* mindScribeApp.swift */,
 				CEA4341E2A342F04006B1077 /* DiaryViewModel.swift */,
@@ -283,10 +283,10 @@
 				CE985FFC2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift in Sources */,
 				CEA434172A32C35E006B1077 /* EntryDetailView.swift in Sources */,
 				CEA433EF2A32BC99006B1077 /* ContentView.swift in Sources */,
-				CE9860022A35B12500864E81 /* CodeData+ClassProperties.swift in Sources */,
+				CE98CEE72A39872100685035 /* DiaryEntry+CoreDataClass.swift in Sources */,
 				CE985FF62A34A14700864E81 /* DiaryEntryModel.xcdatamodeld in Sources */,
 				CEA433ED2A32BC99006B1077 /* mindScribeApp.swift in Sources */,
-				CE9860002A35701300864E81 /* PersistenceController.swift in Sources */,
+				CE9860002A35701300864E81 /* CoreDataRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
