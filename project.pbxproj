@@ -90,8 +90,8 @@
 			children = (
 				CE98CEE62A39872100685035 /* DiaryEntry+CoreDataClass.swift */,
 				CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */,
-				CE985FFF2A35701300864E81 /* CoreDataRepository.swift */,
 				CE985FF42A34A14700864E81 /* DiaryEntryModel.xcdatamodeld */,
+				CE985FFF2A35701300864E81 /* CoreDataRepository.swift */,
 				CEA433EC2A32BC99006B1077 /* mindScribeApp.swift */,
 				CEA4341E2A342F04006B1077 /* DiaryViewModel.swift */,
 				CEA433EB2A32BC99006B1077 /* mindScribe */,
