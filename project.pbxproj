@@ -11,6 +11,7 @@
 		CE985FFC2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */; };
 		CE9860002A35701300864E81 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFF2A35701300864E81 /* CoreDataRepository.swift */; };
 		CE98CEE72A39872100685035 /* DiaryEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98CEE62A39872100685035 /* DiaryEntry+CoreDataClass.swift */; };
+		CEA2B6012A42E7A6002F261C /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA2B6002A42E7A6002F261C /* CanvasView.swift */; };
 		CEA433ED2A32BC99006B1077 /* mindScribeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA433EC2A32BC99006B1077 /* mindScribeApp.swift */; };
 		CEA433EF2A32BC99006B1077 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA433EE2A32BC99006B1077 /* ContentView.swift */; };
 		CEA433F12A32BC9B006B1077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA433F02A32BC9B006B1077 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE985FFF2A35701300864E81 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
 		CE98CEE62A39872100685035 /* DiaryEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CEA2B6002A42E7A6002F261C /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		CEA433E92A32BC99006B1077 /* mindScribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindScribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA433EC2A32BC99006B1077 /* mindScribeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindScribeApp.swift; sourceTree = "<group>"; };
 		CEA433EE2A32BC99006B1077 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				CEA433EE2A32BC99006B1077 /* ContentView.swift */,
 				CEA434162A32C35E006B1077 /* EntryDetailView.swift */,
 				CEA434182A32C826006B1077 /* NewEntryView.swift */,
+				CEA2B6002A42E7A6002F261C /* CanvasView.swift */,
 				CEA433F02A32BC9B006B1077 /* Assets.xcassets */,
 				CEA433F22A32BC9B006B1077 /* Preview Content */,
 			);
@@ -280,6 +283,7 @@
 			files = (
 				CEA4341F2A342F04006B1077 /* DiaryViewModel.swift in Sources */,
 				CEA434192A32C826006B1077 /* NewEntryView.swift in Sources */,
+				CEA2B6012A42E7A6002F261C /* CanvasView.swift in Sources */,
 				CE985FFC2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift in Sources */,
 				CEA434172A32C35E006B1077 /* EntryDetailView.swift in Sources */,
 				CEA433EF2A32BC99006B1077 /* ContentView.swift in Sources */,
