@@ -17,7 +17,7 @@ struct ContentView: View {
             List {
                 ForEach(viewModel.entries, id: \.id) { entry in
                     NavigationLink(destination: EntryDetailView(entry: entry)) {
-                        if let imageData = entry.handwritingData,
+                        if let imageData = entry.handwritingData, // fetchingHandwring
                            let image = UIImage(data: imageData) {
                             Image(uiImage: image)
                                 .resizable()
