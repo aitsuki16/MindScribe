@@ -54,6 +54,7 @@ struct EntryDetailView: View {
         .navigationBarTitle("Diary")
     }
 
+    // save To Coredata as binaryData
     private func saveDrawing() {
         let drawingData = drawing.dataRepresentation()
         entry.handwritingData = drawingData
