@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE985FF62A34A14700864E81 /* DiaryEntryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE985FF42A34A14700864E81 /* DiaryEntryModel.xcdatamodeld */; };
+		CE985FFC2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */; };
+		CE9860002A35701300864E81 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFF2A35701300864E81 /* CoreDataRepository.swift */; };
+		CE98CEE72A39872100685035 /* DiaryEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98CEE62A39872100685035 /* DiaryEntry+CoreDataClass.swift */; };
+		CEA2B6012A42E7A6002F261C /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA2B6002A42E7A6002F261C /* CanvasView.swift */; };
+		CEA433ED2A32BC99006B1077 /* mindScribeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA433EC2A32BC99006B1077 /* mindScribeApp.swift */; };
+		CEA433EF2A32BC99006B1077 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA433EE2A32BC99006B1077 /* ContentView.swift */; };
+		CEA433F12A32BC9B006B1077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA433F02A32BC9B006B1077 /* Assets.xcassets */; };
+		CEA433F42A32BC9B006B1077 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA433F32A32BC9B006B1077 /* Preview Assets.xcassets */; };
+		CEA433FE2A32BC9C006B1077 /* mindScribeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA433FD2A32BC9C006B1077 /* mindScribeTests.swift */; };
+		CEA434082A32BC9C006B1077 /* mindScribeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA434072A32BC9C006B1077 /* mindScribeUITests.swift */; };
+		CEA4340A2A32BC9C006B1077 /* mindScribeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA434092A32BC9C006B1077 /* mindScribeUITestsLaunchTests.swift */; };
+		CEA434172A32C35E006B1077 /* EntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA434162A32C35E006B1077 /* EntryDetailView.swift */; };
+		CEA434192A32C826006B1077 /* NewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA434182A32C826006B1077 /* NewEntryView.swift */; };
+		CEA4341F2A342F04006B1077 /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4341E2A342F04006B1077 /* DiaryViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEA433FA2A32BC9C006B1077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA433E12A32BC99006B1077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEA433E82A32BC99006B1077;
+			remoteInfo = mindScribe;
+		};
+		CEA434042A32BC9C006B1077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA433E12A32BC99006B1077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEA433E82A32BC99006B1077;
+			remoteInfo = mindScribe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE985FF52A34A14700864E81 /* DiaryEntryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryEntryModel.xcdatamodel; sourceTree = "<group>"; };
+		CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE985FFF2A35701300864E81 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
+		CE98CEE62A39872100685035 /* DiaryEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CEA2B6002A42E7A6002F261C /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		CEA433E92A32BC99006B1077 /* mindScribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindScribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA433EC2A32BC99006B1077 /* mindScribeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindScribeApp.swift; sourceTree = "<group>"; };
+		CEA433EE2A32BC99006B1077 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEA433F02A32BC9B006B1077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEA433F32A32BC9B006B1077 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEA433F92A32BC9C006B1077 /* mindScribeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mindScribeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA433FD2A32BC9C006B1077 /* mindScribeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindScribeTests.swift; sourceTree = "<group>"; };
+		CEA434032A32BC9C006B1077 /* mindScribeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mindScribeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA434072A32BC9C006B1077 /* mindScribeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindScribeUITests.swift; sourceTree = "<group>"; };
+		CEA434092A32BC9C006B1077 /* mindScribeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindScribeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEA434162A32C35E006B1077 /* EntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailView.swift; sourceTree = "<group>"; };
+		CEA434182A32C826006B1077 /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
+		CEA4341E2A342F04006B1077 /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEA433E62A32BC99006B1077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA433F62A32BC9C006B1077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA434002A32BC9C006B1077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEA433E02A32BC99006B1077 = {
+			isa = PBXGroup;
+			children = (
+				CE98CEE62A39872100685035 /* DiaryEntry+CoreDataClass.swift */,
+				CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */,
+				CE985FF42A34A14700864E81 /* DiaryEntryModel.xcdatamodeld */,
+				CE985FFF2A35701300864E81 /* CoreDataRepository.swift */,
+				CEA433EC2A32BC99006B1077 /* mindScribeApp.swift */,
+				CEA4341E2A342F04006B1077 /* DiaryViewModel.swift */,
+				CEA433EB2A32BC99006B1077 /* mindScribe */,
+				CEA433FC2A32BC9C006B1077 /* mindScribeTests */,
+				CEA434062A32BC9C006B1077 /* mindScribeUITests */,
+				CEA433EA2A32BC99006B1077 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEA433EA2A32BC99006B1077 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEA433E92A32BC99006B1077 /* mindScribe.app */,
+				CEA433F92A32BC9C006B1077 /* mindScribeTests.xctest */,
+				CEA434032A32BC9C006B1077 /* mindScribeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEA433EB2A32BC99006B1077 /* mindScribe */ = {
+			isa = PBXGroup;
+			children = (
+				CEA433EE2A32BC99006B1077 /* ContentView.swift */,
+				CEA434162A32C35E006B1077 /* EntryDetailView.swift */,
+				CEA434182A32C826006B1077 /* NewEntryView.swift */,
+				CEA2B6002A42E7A6002F261C /* CanvasView.swift */,
+				CEA433F02A32BC9B006B1077 /* Assets.xcassets */,
+				CEA433F22A32BC9B006B1077 /* Preview Content */,
+			);
+			path = mindScribe;
+			sourceTree = "<group>";
+		};
+		CEA433F22A32BC9B006B1077 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CEA433F32A32BC9B006B1077 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CEA433FC2A32BC9C006B1077 /* mindScribeTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEA433FD2A32BC9C006B1077 /* mindScribeTests.swift */,
+			);
+			path = mindScribeTests;
+			sourceTree = "<group>";
+		};
+		CEA434062A32BC9C006B1077 /* mindScribeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEA434072A32BC9C006B1077 /* mindScribeUITests.swift */,
+				CEA434092A32BC9C006B1077 /* mindScribeUITestsLaunchTests.swift */,
+			);
+			path = mindScribeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEA433E82A32BC99006B1077 /* mindScribe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA4340D2A32BC9C006B1077 /* Build configuration list for PBXNativeTarget "mindScribe" */;
+			buildPhases = (
+				CEA433E52A32BC99006B1077 /* Sources */,
+				CEA433E62A32BC99006B1077 /* Frameworks */,
+				CEA433E72A32BC99006B1077 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mindScribe;
+			productName = mindScribe;
+			productReference = CEA433E92A32BC99006B1077 /* mindScribe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEA433F82A32BC9C006B1077 /* mindScribeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA434102A32BC9C006B1077 /* Build configuration list for PBXNativeTarget "mindScribeTests" */;
+			buildPhases = (
+				CEA433F52A32BC9C006B1077 /* Sources */,
+				CEA433F62A32BC9C006B1077 /* Frameworks */,
+				CEA433F72A32BC9C006B1077 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEA433FB2A32BC9C006B1077 /* PBXTargetDependency */,
+			);
+			name = mindScribeTests;
+			productName = mindScribeTests;
+			productReference = CEA433F92A32BC9C006B1077 /* mindScribeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEA434022A32BC9C006B1077 /* mindScribeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA434132A32BC9C006B1077 /* Build configuration list for PBXNativeTarget "mindScribeUITests" */;
+			buildPhases = (
+				CEA433FF2A32BC9C006B1077 /* Sources */,
+				CEA434002A32BC9C006B1077 /* Frameworks */,
+				CEA434012A32BC9C006B1077 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEA434052A32BC9C006B1077 /* PBXTargetDependency */,
+			);
+			name = mindScribeUITests;
+			productName = mindScribeUITests;
+			productReference = CEA434032A32BC9C006B1077 /* mindScribeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEA433E12A32BC99006B1077 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					CEA433E82A32BC99006B1077 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					CEA433F82A32BC9C006B1077 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = CEA433E82A32BC99006B1077;
+					};
+					CEA434022A32BC9C006B1077 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = CEA433E82A32BC99006B1077;
+					};
+				};
+			};
+			buildConfigurationList = CEA433E42A32BC99006B1077 /* Build configuration list for PBXProject "mindScribe" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEA433E02A32BC99006B1077;
+			productRefGroup = CEA433EA2A32BC99006B1077 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEA433E82A32BC99006B1077 /* mindScribe */,
+				CEA433F82A32BC9C006B1077 /* mindScribeTests */,
+				CEA434022A32BC9C006B1077 /* mindScribeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEA433E72A32BC99006B1077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA433F42A32BC9B006B1077 /* Preview Assets.xcassets in Resources */,
+				CEA433F12A32BC9B006B1077 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA433F72A32BC9C006B1077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA434012A32BC9C006B1077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEA433E52A32BC99006B1077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA4341F2A342F04006B1077 /* DiaryViewModel.swift in Sources */,
+				CEA434192A32C826006B1077 /* NewEntryView.swift in Sources */,
+				CEA2B6012A42E7A6002F261C /* CanvasView.swift in Sources */,
+				CE985FFC2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift in Sources */,
+				CEA434172A32C35E006B1077 /* EntryDetailView.swift in Sources */,
+				CEA433EF2A32BC99006B1077 /* ContentView.swift in Sources */,
+				CE98CEE72A39872100685035 /* DiaryEntry+CoreDataClass.swift in Sources */,
+				CE985FF62A34A14700864E81 /* DiaryEntryModel.xcdatamodeld in Sources */,
+				CEA433ED2A32BC99006B1077 /* mindScribeApp.swift in Sources */,
+				CE9860002A35701300864E81 /* CoreDataRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA433F52A32BC9C006B1077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA433FE2A32BC9C006B1077 /* mindScribeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA433FF2A32BC9C006B1077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA4340A2A32BC9C006B1077 /* mindScribeUITestsLaunchTests.swift in Sources */,
+				CEA434082A32BC9C006B1077 /* mindScribeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEA433FB2A32BC9C006B1077 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEA433E82A32BC99006B1077 /* mindScribe */;
+			targetProxy = CEA433FA2A32BC9C006B1077 /* PBXContainerItemProxy */;
+		};
+		CEA434052A32BC9C006B1077 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEA433E82A32BC99006B1077 /* mindScribe */;
+			targetProxy = CEA434042A32BC9C006B1077 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CEA4340B2A32BC9C006B1077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEA4340C2A32BC9C006B1077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEA4340E2A32BC9C006B1077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"mindScribe/Preview Content\"";
+				DEVELOPMENT_TEAM = 6FL7354HD3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IgarashiAi.mindScribe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CEA4340F2A32BC9C006B1077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"mindScribe/Preview Content\"";
+				DEVELOPMENT_TEAM = 6FL7354HD3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IgarashiAi.mindScribe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CEA434112A32BC9C006B1077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6FL7354HD3;
+				FUSE_BUILD_SCRIPT_PHASES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IgarashiAi.mindScribeTests;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = IgarashiAi;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = IgarashiAi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mindScribe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mindScribe";
+			};
+			name = Debug;
+		};
+		CEA434122A32BC9C006B1077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6FL7354HD3;
+				FUSE_BUILD_SCRIPT_PHASES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IgarashiAi.mindScribeTests;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = IgarashiAi;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = IgarashiAi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mindScribe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mindScribe";
+			};
+			name = Release;
+		};
+		CEA434142A32BC9C006B1077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IgarashiAi.mindScribeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mindScribe;
+			};
+			name = Debug;
+		};
+		CEA434152A32BC9C006B1077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IgarashiAi.mindScribeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mindScribe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEA433E42A32BC99006B1077 /* Build configuration list for PBXProject "mindScribe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA4340B2A32BC9C006B1077 /* Debug */,
+				CEA4340C2A32BC9C006B1077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA4340D2A32BC9C006B1077 /* Build configuration list for PBXNativeTarget "mindScribe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA4340E2A32BC9C006B1077 /* Debug */,
+				CEA4340F2A32BC9C006B1077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA434102A32BC9C006B1077 /* Build configuration list for PBXNativeTarget "mindScribeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA434112A32BC9C006B1077 /* Debug */,
+				CEA434122A32BC9C006B1077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA434132A32BC9C006B1077 /* Build configuration list for PBXNativeTarget "mindScribeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA434142A32BC9C006B1077 /* Debug */,
+				CEA434152A32BC9C006B1077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE985FF42A34A14700864E81 /* DiaryEntryModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE985FF52A34A14700864E81 /* DiaryEntryModel.xcdatamodel */,
+			);
+			currentVersion = CE985FF52A34A14700864E81 /* DiaryEntryModel.xcdatamodel */;
+			path = DiaryEntryModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CEA433E12A32BC99006B1077 /* Project object */;
+}
