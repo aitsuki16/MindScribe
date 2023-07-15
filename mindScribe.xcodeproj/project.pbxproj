@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1800F5352A5A534100E7ED02 /* HandWriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800F5342A5A534100E7ED02 /* HandWriting.swift */; };
 		CE985FF62A34A14700864E81 /* DiaryEntryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE985FF42A34A14700864E81 /* DiaryEntryModel.xcdatamodeld */; };
 		CE985FFC2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */; };
 		CE9860002A35701300864E81 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFF2A35701300864E81 /* CoreDataRepository.swift */; };
@@ -21,7 +22,7 @@
 		CEA4340A2A32BC9C006B1077 /* mindScribeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA434092A32BC9C006B1077 /* mindScribeUITestsLaunchTests.swift */; };
 		CEA434172A32C35E006B1077 /* EntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA434162A32C35E006B1077 /* EntryDetailView.swift */; };
 		CEA434192A32C826006B1077 /* NewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA434182A32C826006B1077 /* NewEntryView.swift */; };
-		CEA4341F2A342F04006B1077 /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4341E2A342F04006B1077 /* DiaryViewModel.swift */; };
+		CEA4341F2A342F04006B1077 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4341E2A342F04006B1077 /* EntryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1800F5342A5A534100E7ED02 /* HandWriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandWriting.swift; sourceTree = "<group>"; };
 		CE985FF52A34A14700864E81 /* DiaryEntryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryEntryModel.xcdatamodel; sourceTree = "<group>"; };
 		CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE985FFF2A35701300864E81 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
@@ -59,7 +61,7 @@
 		CEA434092A32BC9C006B1077 /* mindScribeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindScribeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CEA434162A32C35E006B1077 /* EntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailView.swift; sourceTree = "<group>"; };
 		CEA434182A32C826006B1077 /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
-		CEA4341E2A342F04006B1077 /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
+		CEA4341E2A342F04006B1077 /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,15 +89,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CEA433E02A32BC99006B1077 = {
+		1800F5322A5A4E0900E7ED02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1800F5362A5AA1CC00E7ED02 /* ViewModel */,
+				1800F5332A5A4E1000E7ED02 /* CoreData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1800F5332A5A4E1000E7ED02 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				CE98CEE62A39872100685035 /* DiaryEntry+CoreDataClass.swift */,
 				CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */,
 				CE985FF42A34A14700864E81 /* DiaryEntryModel.xcdatamodeld */,
 				CE985FFF2A35701300864E81 /* CoreDataRepository.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		1800F5362A5AA1CC00E7ED02 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEA4341E2A342F04006B1077 /* EntryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CEA433E02A32BC99006B1077 = {
+			isa = PBXGroup;
+			children = (
+				1800F5322A5A4E0900E7ED02 /* Model */,
 				CEA433EC2A32BC99006B1077 /* mindScribeApp.swift */,
-				CEA4341E2A342F04006B1077 /* DiaryViewModel.swift */,
+				1800F5342A5A534100E7ED02 /* HandWriting.swift */,
 				CEA433EB2A32BC99006B1077 /* mindScribe */,
 				CEA433FC2A32BC9C006B1077 /* mindScribeTests */,
 				CEA434062A32BC9C006B1077 /* mindScribeUITests */,
@@ -281,8 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEA4341F2A342F04006B1077 /* DiaryViewModel.swift in Sources */,
+				CEA4341F2A342F04006B1077 /* EntryViewModel.swift in Sources */,
 				CEA434192A32C826006B1077 /* NewEntryView.swift in Sources */,
+				1800F5352A5A534100E7ED02 /* HandWriting.swift in Sources */,
 				CEA2B6012A42E7A6002F261C /* CanvasView.swift in Sources */,
 				CE985FFC2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift in Sources */,
 				CEA434172A32C35E006B1077 /* EntryDetailView.swift in Sources */,
@@ -449,7 +477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mindScribe/Preview Content\"";
-				DEVELOPMENT_TEAM = 6FL7354HD3;
+				DEVELOPMENT_TEAM = 8BG588F6G9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -481,7 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mindScribe/Preview Content\"";
-				DEVELOPMENT_TEAM = 6FL7354HD3;
+				DEVELOPMENT_TEAM = 8BG588F6G9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

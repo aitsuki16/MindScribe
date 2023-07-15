@@ -9,7 +9,7 @@ import PencilKit
 
 
 struct EntryDetailView: View {
-  @EnvironmentObject private var viewModel: DiaryViewModel
+  @EnvironmentObject private var viewModel: EntryViewModel
   @State private var text: String
   @State private var drawing = PKDrawing()
   let entry: DiaryEntry

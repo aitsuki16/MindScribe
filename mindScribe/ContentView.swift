@@ -8,13 +8,12 @@ import SwiftUI
 import PencilKit
 
 struct ContentView: View {
-  @EnvironmentObject private var viewModel: DiaryViewModel
+  @EnvironmentObject private var entryViewModel: EntryViewModel
   @State private var showNewEntrySheet = false
-  @State private var newEntryText = ""
   var body: some View {
     NavigationView {
       List {
-        ForEach(viewModel.entries, id: \.id) { entry in
+        ForEach(entryViewModel.entries, id: \.id) { entry in
           NavigationLink(destination: EntryDetailView(entry: entry)) {
             Text(entry.text ?? "")
           }
@@ -22,7 +21,7 @@ struct ContentView: View {
         }
         .onDelete(perform: deleteEntry)
         .onMove { indexSet, index in
-          viewModel.entries.move(fromOffsets: indexSet, toOffset: index)
+          entryViewModel.entries.move(fromOffsets: indexSet, toOffset: index)
         }
       }
       .navigationBarTitle("Diary")
@@ -36,16 +35,16 @@ struct ContentView: View {
       }
       )
       .sheet(isPresented: $showNewEntrySheet) {
-        NewEntryView(isPresented: $showNewEntrySheet, newEntryText: $newEntryText)
+        NewEntryView(isPresented: $showNewEntrySheet)
       }
       .onAppear {
-        viewModel.loadEntries()
+        entryViewModel.loadEntries()
       }
     }
   }
   private func deleteEntry(at offsets: IndexSet) {
     for index in offsets {
-      let entry = viewModel.entries[index]
+      let entry = entryViewModel.entries[index]
       CoreDataRepository.shared.delete(item: entry)
     }
   }
