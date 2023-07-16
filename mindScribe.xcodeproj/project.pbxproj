@@ -126,13 +126,25 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		1800F53F2A63ECAB00E7ED02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEA434182A32C826006B1077 /* NewEntryView.swift */,
+				CEA2B6002A42E7A6002F261C /* CanvasView.swift */,
+				CEA434162A32C35E006B1077 /* EntryDetailView.swift */,
+				CEA433EE2A32BC99006B1077 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CEA433E02A32BC99006B1077 = {
 			isa = PBXGroup;
 			children = (
+				CEA433EB2A32BC99006B1077 /* mindScribe */,
+				1800F53F2A63ECAB00E7ED02 /* View */,
 				1800F5322A5A4E0900E7ED02 /* Model */,
 				CEA433EC2A32BC99006B1077 /* mindScribeApp.swift */,
 				1800F5342A5A534100E7ED02 /* HandWriting.swift */,
-				CEA433EB2A32BC99006B1077 /* mindScribe */,
 				CEA433FC2A32BC9C006B1077 /* mindScribeTests */,
 				CEA434062A32BC9C006B1077 /* mindScribeUITests */,
 				CEA433EA2A32BC99006B1077 /* Products */,
@@ -152,10 +164,6 @@
 		CEA433EB2A32BC99006B1077 /* mindScribe */ = {
 			isa = PBXGroup;
 			children = (
-				CEA433EE2A32BC99006B1077 /* ContentView.swift */,
-				CEA434162A32C35E006B1077 /* EntryDetailView.swift */,
-				CEA434182A32C826006B1077 /* NewEntryView.swift */,
-				CEA2B6002A42E7A6002F261C /* CanvasView.swift */,
 				CEA433F02A32BC9B006B1077 /* Assets.xcassets */,
 				CEA433F22A32BC9B006B1077 /* Preview Content */,
 			);
