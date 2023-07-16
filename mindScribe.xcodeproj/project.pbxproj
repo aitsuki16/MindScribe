@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1800F5352A5A534100E7ED02 /* HandWriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800F5342A5A534100E7ED02 /* HandWriting.swift */; };
+		1800F5382A63875500E7ED02 /* EntryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800F5372A63875500E7ED02 /* EntryDetailViewModel.swift */; };
+		1800F53A2A6389F800E7ED02 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800F5392A6389F800E7ED02 /* DataManager.swift */; };
+		1800F53C2A63B44B00E7ED02 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800F53B2A63B44B00E7ED02 /* ContentViewModel.swift */; };
 		CE985FF62A34A14700864E81 /* DiaryEntryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE985FF42A34A14700864E81 /* DiaryEntryModel.xcdatamodeld */; };
 		CE985FFC2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */; };
 		CE9860002A35701300864E81 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFF2A35701300864E81 /* CoreDataRepository.swift */; };
@@ -44,6 +47,9 @@
 
 /* Begin PBXFileReference section */
 		1800F5342A5A534100E7ED02 /* HandWriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandWriting.swift; sourceTree = "<group>"; };
+		1800F5372A63875500E7ED02 /* EntryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewModel.swift; sourceTree = "<group>"; };
+		1800F5392A6389F800E7ED02 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		1800F53B2A63B44B00E7ED02 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		CE985FF52A34A14700864E81 /* DiaryEntryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryEntryModel.xcdatamodel; sourceTree = "<group>"; };
 		CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE985FFF2A35701300864E81 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 				CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */,
 				CE985FF42A34A14700864E81 /* DiaryEntryModel.xcdatamodeld */,
 				CE985FFF2A35701300864E81 /* CoreDataRepository.swift */,
+				1800F5392A6389F800E7ED02 /* DataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -113,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				CEA4341E2A342F04006B1077 /* EntryViewModel.swift */,
+				1800F5372A63875500E7ED02 /* EntryDetailViewModel.swift */,
+				1800F53B2A63B44B00E7ED02 /* ContentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -310,6 +319,7 @@
 			files = (
 				CEA4341F2A342F04006B1077 /* EntryViewModel.swift in Sources */,
 				CEA434192A32C826006B1077 /* NewEntryView.swift in Sources */,
+				1800F5382A63875500E7ED02 /* EntryDetailViewModel.swift in Sources */,
 				1800F5352A5A534100E7ED02 /* HandWriting.swift in Sources */,
 				CEA2B6012A42E7A6002F261C /* CanvasView.swift in Sources */,
 				CE985FFC2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift in Sources */,
@@ -317,7 +327,9 @@
 				CEA433EF2A32BC99006B1077 /* ContentView.swift in Sources */,
 				CE98CEE72A39872100685035 /* DiaryEntry+CoreDataClass.swift in Sources */,
 				CE985FF62A34A14700864E81 /* DiaryEntryModel.xcdatamodeld in Sources */,
+				1800F53C2A63B44B00E7ED02 /* ContentViewModel.swift in Sources */,
 				CEA433ED2A32BC99006B1077 /* mindScribeApp.swift in Sources */,
+				1800F53A2A6389F800E7ED02 /* DataManager.swift in Sources */,
 				CE9860002A35701300864E81 /* CoreDataRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

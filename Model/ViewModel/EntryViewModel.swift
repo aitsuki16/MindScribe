@@ -9,13 +9,14 @@ import CoreData
 import SwiftUI
 import PencilKit
 
-
 class EntryViewModel: ObservableObject {
     @Published var entries: [DiaryEntry] = []
     @Published var entryMode: EntryMode = .handwriting
     @Published var newEntryText: String = ""
     @Published var drawing = PKDrawing()
-
+    
+    private let dataManager: DataManager = DataManager()
+    
     func addTextDiary(text: String) {
         let diary: DiaryEntry = CoreDataRepository.shared.newEntity()
         diary.text = text
@@ -35,21 +36,21 @@ class EntryViewModel: ObservableObject {
         loadEntries()
     }
     
-    func save(diary: DiaryEntry) {
-        CoreDataRepository.shared.save(item: diary)
+    func saveEntry(entry: DiaryEntry) {
+        dataManager.save(diary: entry)
     }
     
     func loadEntries() {
-        entries = CoreDataRepository.shared.fetch()
+        entries = dataManager.loadDiaryEntries()
     }
     
     func saveEntry() {
-      switch entryMode {
-      case .text:
-        addTextDiary(text: newEntryText)
-      case .handwriting:
-        addHandWritingDiary(handwritingData: drawing.dataRepresentation())
-      }
-      newEntryText = ""
+        switch entryMode {
+        case .text:
+            addTextDiary(text: newEntryText)
+        case .handwriting:
+            addHandWritingDiary(handwritingData: drawing.dataRepresentation())
+        }
+        newEntryText = ""
     }
 }
