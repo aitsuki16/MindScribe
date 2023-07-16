@@ -15,12 +15,21 @@ class EntryViewModel: ObservableObject {
     @Published var entryMode: EntryMode = .handwriting
     @Published var newEntryText: String = ""
     @Published var drawing = PKDrawing()
-    
-    func addDiary(text: String, handwritingData: Data?) {
+
+    func addTextDiary(text: String) {
         let diary: DiaryEntry = CoreDataRepository.shared.newEntity()
         diary.text = text
         diary.date = Date()
+        
+        CoreDataRepository.shared.save(item: diary)
+        loadEntries()
+    }
+    
+    func addHandWritingDiary(handwritingData: Data?) {
+        let diary: DiaryEntry = CoreDataRepository.shared.newEntity()
         diary.handwritingData = handwritingData
+        diary.text = "hand writing"
+        diary.date = Date()
         
         CoreDataRepository.shared.save(item: diary)
         loadEntries()
@@ -37,9 +46,9 @@ class EntryViewModel: ObservableObject {
     func saveEntry() {
       switch entryMode {
       case .text:
-        addDiary(text: newEntryText, handwritingData: nil)
+        addTextDiary(text: newEntryText)
       case .handwriting:
-        addDiary(text: "handwriting", handwritingData: drawing.dataRepresentation())
+        addHandWritingDiary(handwritingData: drawing.dataRepresentation())
       }
       newEntryText = ""
     }

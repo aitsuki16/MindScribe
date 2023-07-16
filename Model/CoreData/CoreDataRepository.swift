@@ -18,6 +18,10 @@ class CoreDataRepository {
         container.loadPersistentStores { description, error in
             if let error = error {
                 print("Core Data failed to load: \(error.localizedDescription)")
+            } else {
+                if let url = description.url {
+                    print("Core Data store URL:", url.absoluteString)
+                }
             }
         }
     }
@@ -56,5 +60,4 @@ class CoreDataRepository {
                print("Could not delete. \(error), \(error.userInfo)")
            }
        }
-
 }
