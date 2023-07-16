@@ -7,10 +7,10 @@
 
 import Foundation
 
-class ContentViewViewModel: ObservableObject {
+class ContentViewModel: ObservableObject {
     @Published var entries: [DiaryEntry] = []
     
-    private let dataManager: DataManager = DataManager()
+    public let dataManager: DataManager = DataManager()
 
     func loadEntries() {
         entries = dataManager.loadDiaryEntries()

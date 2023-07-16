@@ -98,7 +98,6 @@
 		1800F5322A5A4E0900E7ED02 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1800F5362A5AA1CC00E7ED02 /* ViewModel */,
 				1800F5332A5A4E1000E7ED02 /* CoreData */,
 			);
 			path = Model;
@@ -140,6 +139,7 @@
 		CEA433E02A32BC99006B1077 = {
 			isa = PBXGroup;
 			children = (
+				1800F5362A5AA1CC00E7ED02 /* ViewModel */,
 				CEA433EB2A32BC99006B1077 /* mindScribe */,
 				1800F53F2A63ECAB00E7ED02 /* View */,
 				1800F5322A5A4E0900E7ED02 /* Model */,

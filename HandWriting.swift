@@ -30,3 +30,8 @@ class Handwriting: NSObject, NSCoding {
         strokes = coder.decodeObject(forKey: "strokes") as? [Stroke] ?? []
     }
 }
+
+enum EntryMode {
+  case text
+  case handwriting
+}
