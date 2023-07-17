@@ -11,6 +11,8 @@ import PencilKit
 struct NewEntryView: View {
   @Binding var isPresented: Bool
   @StateObject var viewModel: EntryViewModel = EntryViewModel()
+  @State private var pickerIndex = 0
+
  
   var body: some View {
     NavigationView {
@@ -18,10 +20,21 @@ struct NewEntryView: View {
         Text("New Entry")
           .font(.largeTitle)
           .padding()
-          Picker("Entry Mode", selection: $viewModel.entryMode) {
-          Text("Text").tag(EntryMode.text)
-          Text("Handwriting").tag(EntryMode.handwriting)
-        }
+          Picker("", selection: $pickerIndex) {
+              Text("Text").tag(0)
+              Text("Handwriting").tag(1)
+          }
+          .pickerStyle(SegmentedPickerStyle())
+          .background(Color.blue)
+          .cornerRadius(8)
+          .padding()
+          .gesture(
+              TapGesture()
+                  .onEnded {
+                      pickerIndex = (pickerIndex + 1) % 2
+                  }
+          )
+
         .pickerStyle(.navigationLink)
         .padding()
           if viewModel.entryMode == .text {
@@ -43,7 +56,7 @@ struct NewEntryView: View {
         }) {
           Text("Save")
                 .font(.title3)
-                .foregroundColor(.blue)
+                .foregroundColor(.gray)
         }
         .tint(Color("1"))
         .buttonStyle(.borderedProminent)
