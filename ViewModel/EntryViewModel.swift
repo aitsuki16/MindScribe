@@ -32,6 +32,8 @@ class EntryViewModel: ObservableObject {
         diary.text = "hand writing"
         diary.date = Date()
         
+        print("Saving drawing with data size: \(diary.handwritingData?.count ?? 0)")
+        
         CoreDataRepository.shared.save(item: diary)
         loadEntries()
     }
