@@ -10,14 +10,10 @@ import CoreData
 
 @main 
 struct mindScribeApp: App {
-    let persistenceContainer = CoreDataRepository.shared //
-
-    @StateObject private var viewModel = EntryViewModel()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(viewModel)
         }
     }
 }

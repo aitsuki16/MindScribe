@@ -8,13 +8,9 @@
 import SwiftUI
 import PencilKit
 
-enum EntryMode {
-  case text
-  case handwriting
-}
 struct NewEntryView: View {
   @Binding var isPresented: Bool
-  @EnvironmentObject private var viewModel: EntryViewModel
+  @StateObject var viewModel: EntryViewModel = EntryViewModel()
  
   var body: some View {
     NavigationView {

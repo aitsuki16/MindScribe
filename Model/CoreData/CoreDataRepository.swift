@@ -13,11 +13,15 @@ class CoreDataRepository {
     static let shared = CoreDataRepository()
     
     private let container = NSPersistentContainer(name: "DiaryEntryModel")
-
+    
     private init() {
         container.loadPersistentStores { description, error in
             if let error = error {
                 print("Core Data failed to load: \(error.localizedDescription)")
+            } else {
+                if let url = description.url {
+                    print("Core Data store URL:", url.absoluteString)
+                }
             }
         }
     }
@@ -48,13 +52,12 @@ class CoreDataRepository {
     }
     
     func delete<T: NSManagedObject>(item: T) {
-           container.viewContext.delete(item)
-           
-           do {
-               try container.viewContext.save()
-           } catch let error as NSError {
-               print("Could not delete. \(error), \(error.userInfo)")
-           }
-       }
-
+        container.viewContext.delete(item)
+        
+        do {
+            try container.viewContext.save()
+        } catch let error as NSError {
+            print("Could not delete. \(error), \(error.userInfo)")
+        }
+    }
 }
