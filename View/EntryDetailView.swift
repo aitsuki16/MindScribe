@@ -20,7 +20,7 @@ struct EntryDetailView: View {
                 .padding()
                 .onChange(of: viewModel.text) { newValue in
                     viewModel.entry.text = newValue
-                    //                    viewModel.save(diary: viewModel.entry)
+                    //viewModel.save(diary: viewModel.entry)
                 }
             if viewModel.entryMode == .text {
                 TextEditor(text: $viewModel.text)
