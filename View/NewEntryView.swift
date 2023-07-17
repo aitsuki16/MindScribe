@@ -42,15 +42,13 @@ struct NewEntryView: View {
             isPresented = false
         }) {
           Text("Save")
-            .font(.title3)
-            .foregroundColor(.primary)
-            .padding()
+                .font(.title3)
+                .foregroundColor(.blue)
         }
-        .padding()
-        .foregroundColor(.teal)
-        .bold()
-        .font(.title3)
-        .background(Color("1"))
+        .tint(Color("1"))
+        .buttonStyle(.borderedProminent)
+        .buttonBorderShape(.roundedRectangle)
+        .controlSize(.regular)
       }
     }
   }

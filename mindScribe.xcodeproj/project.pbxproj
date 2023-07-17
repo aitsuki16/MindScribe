@@ -106,6 +106,7 @@
 		1800F5332A5A4E1000E7ED02 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				1800F53F2A63ECAB00E7ED02 /* View */,
 				CE98CEE62A39872100685035 /* DiaryEntry+CoreDataClass.swift */,
 				CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */,
 				CE985FF42A34A14700864E81 /* DiaryEntryModel.xcdatamodeld */,
@@ -140,9 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				1800F5362A5AA1CC00E7ED02 /* ViewModel */,
-				CEA433EB2A32BC99006B1077 /* mindScribe */,
-				1800F53F2A63ECAB00E7ED02 /* View */,
 				1800F5322A5A4E0900E7ED02 /* Model */,
+				CEA433EB2A32BC99006B1077 /* mindScribe */,
 				CEA433EC2A32BC99006B1077 /* mindScribeApp.swift */,
 				1800F5342A5A534100E7ED02 /* HandWriting.swift */,
 				CEA433FC2A32BC9C006B1077 /* mindScribeTests */,
