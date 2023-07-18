@@ -37,11 +37,14 @@ struct ContentView: View {
             .sheet(isPresented: $showNewEntrySheet, onDismiss: {
                 viewModel.loadEntries()
             }) {
-                NewEntryView(isPresented: $showNewEntrySheet)
+                NewEntryView(isPresented: $showNewEntrySheet, onCancel: {
+                    showNewEntrySheet = false 
+                })
             }
             .onAppear {
                 viewModel.loadEntries()
             }
+
         }
     }
     private func deleteEntry(at offsets: IndexSet) {
