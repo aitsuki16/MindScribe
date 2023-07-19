@@ -51,13 +51,14 @@ class CoreDataRepository {
         }
     }
     
-//    func delete<T: NSManagedObject>(item: T) {
-//        container.viewContext.delete(item)
-//        
-//        do {
-//            try container.viewContext.save()
-//        } catch let error as NSError {
-//            print("Could not delete. \(error), \(error.userInfo)")
-//        }
-//    }
+    func delete<T: NSManagedObject>(item: T) {
+        container.viewContext.delete(item)
+        
+        do {
+            try container.viewContext.save()
+        } catch let error as NSError {
+            print("Could not delete. \(error), \(error.userInfo)")
+        }
+        
+    }
 }
