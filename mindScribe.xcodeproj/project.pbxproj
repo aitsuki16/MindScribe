@@ -11,6 +11,7 @@
 		1800F5382A63875500E7ED02 /* EntryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800F5372A63875500E7ED02 /* EntryDetailViewModel.swift */; };
 		1800F53A2A6389F800E7ED02 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800F5392A6389F800E7ED02 /* DataManager.swift */; };
 		1800F53C2A63B44B00E7ED02 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800F53B2A63B44B00E7ED02 /* ContentViewModel.swift */; };
+		CE676A9C2A67782B0076CA87 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE676A9B2A67782B0076CA87 /* CustomSegmentedControl.swift */; };
 		CE985FF62A34A14700864E81 /* DiaryEntryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE985FF42A34A14700864E81 /* DiaryEntryModel.xcdatamodeld */; };
 		CE985FFC2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */; };
 		CE9860002A35701300864E81 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE985FFF2A35701300864E81 /* CoreDataRepository.swift */; };
@@ -50,6 +51,7 @@
 		1800F5372A63875500E7ED02 /* EntryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewModel.swift; sourceTree = "<group>"; };
 		1800F5392A6389F800E7ED02 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		1800F53B2A63B44B00E7ED02 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		CE676A9B2A67782B0076CA87 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		CE985FF52A34A14700864E81 /* DiaryEntryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryEntryModel.xcdatamodel; sourceTree = "<group>"; };
 		CE985FFA2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE985FFF2A35701300864E81 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				CEA2B6002A42E7A6002F261C /* CanvasView.swift */,
 				CEA434162A32C35E006B1077 /* EntryDetailView.swift */,
 				CEA433EE2A32BC99006B1077 /* ContentView.swift */,
+				CE676A9B2A67782B0076CA87 /* CustomSegmentedControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				CE985FFC2A34A54700864E81 /* DiaryEntry+CoreDataProperties.swift in Sources */,
 				CEA434172A32C35E006B1077 /* EntryDetailView.swift in Sources */,
 				CEA433EF2A32BC99006B1077 /* ContentView.swift in Sources */,
+				CE676A9C2A67782B0076CA87 /* CustomSegmentedControl.swift in Sources */,
 				CE98CEE72A39872100685035 /* DiaryEntry+CoreDataClass.swift in Sources */,
 				CE985FF62A34A14700864E81 /* DiaryEntryModel.xcdatamodeld in Sources */,
 				1800F53C2A63B44B00E7ED02 /* ContentViewModel.swift in Sources */,

@@ -11,7 +11,6 @@ import PencilKit
 struct NewEntryView: View {
     @Binding var isPresented: Bool
     @StateObject var viewModel: EntryViewModel = EntryViewModel()
-    @State private var pickerIndex = 0
     var onCancel: () -> Void
 
     var body: some View {
@@ -21,20 +20,7 @@ struct NewEntryView: View {
                     .font(.largeTitle)
                     .padding()
 
-                Picker("", selection: $pickerIndex) {
-                    Text("Text").tag(0)
-                    Text("Handwriting").tag(1)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .background(Color.blue)
-                .cornerRadius(8)
-                .padding()
-                .gesture(
-                    TapGesture()
-                        .onEnded {
-                            pickerIndex = (pickerIndex + 1) % 2
-                        }
-                )
+                CustomSegmentedControl(selection: $viewModel.entryMode)
 
                 if viewModel.entryMode == .text {
                     TextEditor(text: $viewModel.newEntryText)
@@ -69,6 +55,7 @@ struct NewEntryView: View {
         }
     }
 }
+
 struct NewEntryView_Previews: PreviewProvider {
     static var previews: some View {
         NewEntryView(isPresented: .constant(false), onCancel: {})

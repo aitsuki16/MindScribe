@@ -27,7 +27,8 @@ struct ContentView: View {
             .navigationBarTitle("Diary")
             .foregroundColor(.white)
             .navigationBarItems(trailing:
-                                    Button(action: {
+            
+         Button(action: {
                 showNewEntrySheet = true
             }) {
                 Image(systemName: "plus")
