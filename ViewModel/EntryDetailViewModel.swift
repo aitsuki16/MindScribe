@@ -37,6 +37,6 @@ class EntryDetailViewModel: ObservableObject {
     }
     
     func saveDiary() {
-        //        dataManager.save(diary: entry)
+                dataManager.save(diary: entry)
     }
 }

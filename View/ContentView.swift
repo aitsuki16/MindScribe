@@ -51,7 +51,7 @@ struct ContentView: View {
     private func deleteEntry(at offsets: IndexSet) {
         for index in offsets {
             let entry = viewModel.entries[index]
-            CoreDataRepository.shared.delete(item: entry)
+            viewModel.deleteEntry(entry: entry)
         }
     }
 }
