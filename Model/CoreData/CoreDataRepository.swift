@@ -32,7 +32,8 @@ class CoreDataRepository {
     
     func fetch<T: NSFetchRequestResult>() -> Array<T> {
         let fetchRequest: NSFetchRequest<T> = NSFetchRequest<T>(entityName: String(describing: T.self))
-        
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+
         do {
             return try container.viewContext.fetch(fetchRequest)
         } catch let error as NSError {

@@ -50,5 +50,7 @@ class EntryDetailViewModel: ObservableObject {
         }
                 dataManager.save(diary: entry)
         isEditing = false
+        entry.date = Date()
+
     }
 }
