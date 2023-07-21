@@ -39,7 +39,10 @@ struct EntryDetailView: View {
             }
 
             Toggle("Edit", isOn: $edit)
-
+                      .onChange(of: edit) { newValue in
+                          viewModel.isEditing = newValue
+                      }
+            
             Button(action: {
                 viewModel.saveDiary()
                 isPresented = false

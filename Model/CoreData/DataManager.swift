@@ -16,6 +16,10 @@ class DataManager {
         CoreDataRepository.shared.fetch()
     }
     
+    func updateDiaryEntry(entry: DiaryEntry) {
+            CoreDataRepository.shared.saveContext() 
+        }
+    
     func deleteDiaryEntry(entry: DiaryEntry) {
             CoreDataRepository.shared.delete(item: entry)
             CoreDataRepository.shared.saveContext()

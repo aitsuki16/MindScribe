@@ -16,7 +16,7 @@ class EntryDetailViewModel: ObservableObject {
     @Published var entryMode: EntryMode = .handwriting
     @Published var drawing: PKDrawing = PKDrawing()
     @Published var text: String
-    
+    @Published var isEditing = false
     
     init(entry: DiaryEntry, dataManager: DataManager) {
         self.entry = entry
@@ -37,6 +37,18 @@ class EntryDetailViewModel: ObservableObject {
     }
     
     func saveDiary() {
+        if isEditing {
+            if entryMode == .text {
+                entry.text = text
+            } else {
+                do {
+                    entry.handwritingData = try drawing.dataRepresentation()
+                } catch {
+                    print("Failed to save handwriting data :\(error)")
+                }
+            }
+        }
                 dataManager.save(diary: entry)
+        isEditing = false
     }
 }
