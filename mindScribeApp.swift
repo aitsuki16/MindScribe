@@ -10,7 +10,6 @@ import CoreData
 
 @main 
 struct mindScribeApp: App {
-
     var body: some Scene {
         WindowGroup {
             ContentView()

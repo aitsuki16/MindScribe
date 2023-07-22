@@ -32,7 +32,8 @@ class CoreDataRepository {
     
     func fetch<T: NSFetchRequestResult>() -> Array<T> {
         let fetchRequest: NSFetchRequest<T> = NSFetchRequest<T>(entityName: String(describing: T.self))
-        
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+
         do {
             return try container.viewContext.fetch(fetchRequest)
         } catch let error as NSError {
@@ -53,11 +54,13 @@ class CoreDataRepository {
     
     func delete<T: NSManagedObject>(item: T) {
         container.viewContext.delete(item)
-        
-        do {
-            try container.viewContext.save()
-        } catch let error as NSError {
-            print("Could not delete. \(error), \(error.userInfo)")
-        }
     }
+    
+    func saveContext() {
+           do {
+               try container.viewContext.save()
+           } catch let error as NSError {
+               print("Could not save context. \(error), \(error.userInfo)")
+           }
+       }
 }
