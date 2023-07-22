@@ -19,15 +19,17 @@ struct ContentView: View {
                        }
                     .listRowBackground(Color("1"))
                 }
-                .onDelete(perform: deleteEntry)
+               
                 .onMove { indexSet, index in
                     viewModel.entries.move(fromOffsets: indexSet, toOffset: index)
                 }
+                .onDelete(perform: deleteEntry)
             }
             .navigationBarTitle("Diary")
             .foregroundColor(.white)
             .navigationBarItems(trailing:
-                                    Button(action: {
+            
+            Button(action: {
                 showNewEntrySheet = true
             }) {
                 Image(systemName: "plus")
@@ -37,17 +39,20 @@ struct ContentView: View {
             .sheet(isPresented: $showNewEntrySheet, onDismiss: {
                 viewModel.loadEntries()
             }) {
-                NewEntryView(isPresented: $showNewEntrySheet)
+                NewEntryView(isPresented: $showNewEntrySheet, onCancel: {
+                    showNewEntrySheet = false 
+                })
             }
             .onAppear {
                 viewModel.loadEntries()
             }
+
         }
     }
-    private func deleteEntry(at offsets: IndexSet) {
+     func deleteEntry(at offsets: IndexSet) {
         for index in offsets {
             let entry = viewModel.entries[index]
-            CoreDataRepository.shared.delete(item: entry)
+            viewModel.deleteEntry(entry: entry)
         }
     }
 }
