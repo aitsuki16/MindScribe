@@ -32,7 +32,7 @@ struct NewEntryView: View {
                         .frame(width: UIScreen.main.bounds.width - 40, height: 500)
                         .border(Color.gray)
                         .padding(10)
-                        .background(LinearGradient(gradient: Gradient(colors: [.red, .blue]), startPoint: .top, endPoint: .bottom))
+                        .background(LinearGradient(gradient: Gradient(colors: [.yellow, .blue]), startPoint: .top, endPoint: .bottom))
                         .opacity(0.7)
                 }
 

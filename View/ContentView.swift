@@ -19,10 +19,11 @@ struct ContentView: View {
                        }
                     .listRowBackground(Color("1"))
                 }
-                .onDelete(perform: deleteEntry)
+               
                 .onMove { indexSet, index in
                     viewModel.entries.move(fromOffsets: indexSet, toOffset: index)
                 }
+                .onDelete(perform: deleteEntry)
             }
             .navigationBarTitle("Diary")
             .foregroundColor(.white)
@@ -48,7 +49,7 @@ struct ContentView: View {
 
         }
     }
-    private func deleteEntry(at offsets: IndexSet) {
+     func deleteEntry(at offsets: IndexSet) {
         for index in offsets {
             let entry = viewModel.entries[index]
             viewModel.deleteEntry(entry: entry)
