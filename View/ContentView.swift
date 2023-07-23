@@ -15,11 +15,19 @@ struct ContentView: View {
             List {
                 ForEach(viewModel.entries, id: \.id) { entry in
                     NavigationLink(destination: EntryDetailView(isPresented: $showNewEntrySheet, viewModel: EntryDetailViewModel(entry: entry, dataManager: viewModel.dataManager))) {
-                           Text(entry.text ?? "")
-                       }
+                        if let txt = entry.text {
+                            if txt.count > 15 {
+                                Text(String(txt.prefix(15)) + " ...")
+                            } else {
+                                Text(txt)
+                            }
+                        } else {
+                            Text("")
+                        }
+                    }
                     .listRowBackground(Color("1"))
                 }
-               
+                
                 .onMove { indexSet, index in
                     viewModel.entries.move(fromOffsets: indexSet, toOffset: index)
                 }
@@ -28,8 +36,8 @@ struct ContentView: View {
             .navigationBarTitle("Diary")
             .foregroundColor(.white)
             .navigationBarItems(trailing:
-            
-            Button(action: {
+                                    
+                                    Button(action: {
                 showNewEntrySheet = true
             }) {
                 Image(systemName: "plus")
@@ -40,16 +48,15 @@ struct ContentView: View {
                 viewModel.loadEntries()
             }) {
                 NewEntryView(isPresented: $showNewEntrySheet, onCancel: {
-                    showNewEntrySheet = false 
+                    showNewEntrySheet = false
                 })
             }
             .onAppear {
                 viewModel.loadEntries()
             }
-
         }
     }
-     func deleteEntry(at offsets: IndexSet) {
+    func deleteEntry(at offsets: IndexSet) {
         for index in offsets {
             let entry = viewModel.entries[index]
             viewModel.deleteEntry(entry: entry)
