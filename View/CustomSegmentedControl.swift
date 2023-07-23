@@ -20,7 +20,7 @@ struct CustomSegmentedControl: View {
                     Text("Text")
                         .padding(2)
                         .frame(maxWidth: .infinity)
-                        .background(selection == .text ? Color.indigo : Color.cyan)
+                        .background(selection == .text ? Color.indigo : Color.gray)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
@@ -40,7 +40,7 @@ struct CustomSegmentedControl: View {
                     Text("Handwriting")
                         .padding(2)
                         .frame(maxWidth: .infinity)
-                        .background(selection == .handwriting ? Color.indigo : Color.cyan)
+                        .background(selection == .handwriting ? Color.indigo : Color.gray)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
