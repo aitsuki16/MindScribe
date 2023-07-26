@@ -34,10 +34,10 @@ struct ContentView: View {
                 .onDelete(perform: deleteEntry)
             }
             .navigationBarTitle("Diary")
-            .foregroundColor(.white)
+            .foregroundColor(.indigo)
             .navigationBarItems(trailing:
                                     
-                                    Button(action: {
+            Button(action: {
                 showNewEntrySheet = true
             }) {
                 Image(systemName: "plus")
