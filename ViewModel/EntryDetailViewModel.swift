@@ -41,16 +41,12 @@ class EntryDetailViewModel: ObservableObject {
             if entryMode == .text {
                 entry.text = text
             } else {
-                do {
-                    entry.handwritingData = try drawing.dataRepresentation()
-                } catch {
-                    print("Failed to save handwriting data :\(error)")
-                }
+                entry.handwritingData = drawing.dataRepresentation()
             }
+            dataManager.save(diary: entry)
+            isEditing = false
+            entry.date = Date()
         }
-                dataManager.save(diary: entry)
-        isEditing = false
-        entry.date = Date()
-
     }
+
 }

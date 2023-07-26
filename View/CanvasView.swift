@@ -34,6 +34,9 @@ struct CanvasView: UIViewRepresentable {
         init(_ parent: CanvasView) {
             self.parent = parent
         }
+//        func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
+//                    parent.drawing = canvasView.drawing
+//                }
         
         func canvasViewDidEndUsingTool(_ canvasView: PKCanvasView) {
             parent.drawing = canvasView.drawing
