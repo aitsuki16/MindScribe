@@ -11,6 +11,7 @@ import UIKit
 
 struct CanvasView: UIViewRepresentable {
     @Binding var drawing: PKDrawing
+    var tmpDrawing: PKDrawing? = nil
     
     func makeUIView(context: Context) -> PKCanvasView {
         let canvasView = PKCanvasView()
@@ -21,7 +22,14 @@ struct CanvasView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        uiView.drawing = drawing
+        if let tmpDrawing = context.coordinator.tmpDrawing {
+            uiView.drawing = tmpDrawing
+            context.coordinator.tmpDrawing = nil
+            print("updateUIView with data size: \(uiView.drawing.dataRepresentation().count)")
+        } else {
+            uiView.drawing = drawing
+            print("updateUIView with data size: \(uiView.drawing.dataRepresentation().count)")
+        }
     }
     
     func makeCoordinator() -> Coordinator {
@@ -30,17 +38,23 @@ struct CanvasView: UIViewRepresentable {
     
     class Coordinator: NSObject, PKCanvasViewDelegate {
         var parent: CanvasView
+        var tmpDrawing: PKDrawing?
         
         init(_ parent: CanvasView) {
             self.parent = parent
         }
-//        func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
-//                    parent.drawing = canvasView.drawing
-//                }
+        
+        func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
+            DispatchQueue.main.async {
+                let newDrawing = canvasView.drawing
+                if newDrawing != self.parent.drawing {
+                    self.parent.drawing = newDrawing
+                }
+            }
+        }
         
         func canvasViewDidEndUsingTool(_ canvasView: PKCanvasView) {
-            parent.drawing = canvasView.drawing
-            print("Drawing ended with data size: \(canvasView.drawing.dataRepresentation().count)")
+//            print("Drawing ended with data size: \(canvasView.drawing.dataRepresentation().count)")
         }
     }
 }
