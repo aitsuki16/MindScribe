@@ -18,21 +18,24 @@ struct NewEntryView: View {
             VStack(alignment: .center) {
                 Text("New Entry")
                     .font(.largeTitle)
+                    .foregroundColor(.cyan)
                     .padding()
 
                 CustomSegmentedControl(selection: $viewModel.entryMode)
 
                 if viewModel.entryMode == .text {
                     TextEditor(text: $viewModel.newEntryText)
+                        .frame(width: UIScreen.main.bounds.width - 40, height: 250)
+
                         .padding(10)
-                        .background(LinearGradient(gradient: Gradient(colors: [.teal, .indigo]), startPoint: .top, endPoint: .bottom))
-                        .opacity(0.7)
+                        .background(LinearGradient(gradient: Gradient(colors: [.cyan, .indigo]), startPoint: .top, endPoint: .bottom))
+                        .opacity(0.8)
                 } else {
                     CanvasView(drawing: $viewModel.drawing)
                         .frame(width: UIScreen.main.bounds.width - 40, height: 500)
-                        .border(Color.gray)
+                        //.border(Color.gray)
                         .padding(10)
-                        .background(LinearGradient(gradient: Gradient(colors: [.yellow, .blue]), startPoint: .top, endPoint: .bottom))
+                        .background(LinearGradient(gradient: Gradient(colors: [.indigo, .cyan]), startPoint: .top, endPoint: .bottom))
                         .opacity(0.7)
                 }
 
@@ -42,7 +45,7 @@ struct NewEntryView: View {
                 }) {
                     Text("Save")
                         .font(.title3)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.indigo)
                 }
                 .tint(Color("1"))
                 .buttonStyle(.borderedProminent)
