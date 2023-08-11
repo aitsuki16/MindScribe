@@ -11,6 +11,8 @@ struct EntryDetailView: View {
     @State private var edit = false
 
     @ObservedObject var viewModel: EntryDetailViewModel
+    @Environment(\.presentationMode) var presentationMode
+
     @Binding var isPresented: Bool
 
     init(isPresented: Binding<Bool>, viewModel: EntryDetailViewModel) {
@@ -37,14 +39,10 @@ struct EntryDetailView: View {
                     Text("No Drawing Available")
                 }
             }
-
-            Toggle("Edit", isOn: $edit)
-                      .onChange(of: edit) { newValue in
-                          viewModel.isEditing = newValue
-                      }
-            
+    
             Button(action: {
                 viewModel.saveDiary()
+                presentationMode.wrappedValue.dismiss()
                 isPresented = false
             }) {
                 Text("Save it")
@@ -55,8 +53,15 @@ struct EntryDetailView: View {
             .buttonStyle(.borderedProminent)
             .buttonBorderShape(.roundedRectangle)
             .controlSize(.regular)
-            .padding()
+            //.padding()
         }
+        HStack {
+            Toggle("Edit", isOn: $edit)
+                .onChange(of: edit) { newValue in
+                viewModel.isEditing = newValue
+            }
+        }
+
         .navigationBarTitle("Diary")
     }
 }
