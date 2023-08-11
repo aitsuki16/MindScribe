@@ -44,15 +44,24 @@ struct CanvasView: UIViewRepresentable {
             self.parent = parent
         }
         
+//        func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
+//            DispatchQueue.main.async {
+//                let newDrawing = canvasView.drawing
+//                if newDrawing != self.parent.drawing {
+//                    self.parent.drawing = newDrawing
+//                }
+//            }
+//        }
+        
         func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
-            DispatchQueue.main.async {
+            Task {
                 let newDrawing = canvasView.drawing
                 if newDrawing != self.parent.drawing {
                     self.parent.drawing = newDrawing
                 }
             }
         }
-        
+
         func canvasViewDidEndUsingTool(_ canvasView: PKCanvasView) {
 //            print("Drawing ended with data size: \(canvasView.drawing.dataRepresentation().count)")
         }

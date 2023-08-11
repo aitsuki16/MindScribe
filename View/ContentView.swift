@@ -34,7 +34,7 @@ struct ContentView: View {
                 .onDelete(perform: deleteEntry)
             }
             .navigationBarTitle("Diary")
-            .foregroundColor(.indigo)
+            //.foregroundColor(.blue)
             .navigationBarItems(trailing:
                                     
             Button(action: {
