@@ -53,7 +53,6 @@ struct EntryDetailView: View {
             .buttonStyle(.borderedProminent)
             .buttonBorderShape(.roundedRectangle)
             .controlSize(.regular)
-            //.padding()
         }
         HStack {
  
