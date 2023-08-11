@@ -56,7 +56,15 @@ struct EntryDetailView: View {
             //.padding()
         }
         HStack {
-            Toggle("Edit", isOn: $edit)
+ 
+            Toggle(isOn: $edit, label: {
+                Text("Edit")
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .foregroundColor(.cyan)
+                    .bold()
+
+            })
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 18))
                 .onChange(of: edit) { newValue in
                 viewModel.isEditing = newValue
             }
