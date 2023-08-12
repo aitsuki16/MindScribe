@@ -8,6 +8,8 @@ import SwiftUI
 import PencilKit
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var context
+
     @StateObject var viewModel: ContentViewModel = ContentViewModel()
     @State private var showNewEntrySheet = false
     var body: some View {

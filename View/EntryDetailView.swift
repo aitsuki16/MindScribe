@@ -63,6 +63,8 @@ struct EntryDetailView: View {
                     .bold()
 
             })
+            .toggleStyle(SwitchToggleStyle(tint: .cyan))
+
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 18))
                 .onChange(of: edit) { newValue in
                 viewModel.isEditing = newValue
