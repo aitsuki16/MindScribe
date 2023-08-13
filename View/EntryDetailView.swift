@@ -49,26 +49,25 @@ struct EntryDetailView: View {
                     .font(.title3)
                     .foregroundColor(.white)
             }
-            .tint(Color.blue)
-            .buttonStyle(.borderedProminent)
-            .buttonBorderShape(.roundedRectangle)
-            .controlSize(.regular)
+            .background(Color("3"))
+            .buttonStyle(.bordered)
+            //.controlSize(.regular)
+            .cornerRadius(10)
         }
         HStack {
  
             Toggle(isOn: $edit, label: {
                 Text("Edit")
                     .frame(maxWidth: .infinity, alignment: .trailing)
-                    .foregroundColor(.cyan)
+                    .foregroundColor(Color("3"))
                     .bold()
 
             })
+            .toggleStyle(SwitchToggleStyle(tint: Color("3")))
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 18))
                 .onChange(of: edit) { newValue in
                 viewModel.isEditing = newValue
             }
         }
-
-        .navigationBarTitle("Diary")
     }
 }
