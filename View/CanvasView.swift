@@ -52,7 +52,7 @@ struct CanvasView: UIViewRepresentable {
 //                }
 //            }
 //        }
-        
+
         func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
             Task {
                 let newDrawing = canvasView.drawing
@@ -63,7 +63,7 @@ struct CanvasView: UIViewRepresentable {
         }
 
         func canvasViewDidEndUsingTool(_ canvasView: PKCanvasView) {
-//            print("Drawing ended with data size: \(canvasView.drawing.dataRepresentation().count)")
+            print("Drawing ended with data size: \(canvasView.drawing.dataRepresentation().count)")
         }
     }
 }
