@@ -36,15 +36,26 @@ struct ContentView: View {
                 .onDelete(perform: deleteEntry)
             }
             .navigationBarTitle("Diary")
-            //.foregroundColor(.blue)
             .navigationBarItems(trailing:
-                                    
-            Button(action: {
-                showNewEntrySheet = true
-            }) {
-                Image(systemName: "plus")
-                    .foregroundColor(.mint)
-            }
+                HStack {
+                    Button(action: {
+                        showNewEntrySheet = true
+                    }) {
+                        Image(systemName: "plus")
+                            .foregroundColor(.mint)
+                    }
+                
+                //when wanting to delete all
+//                    Button(action: {
+//                        CoreDataRepository.shared.deleteAllEntries()
+//                        viewModel.loadEntries()
+//                    }) {
+//                        Image(systemName: "trash")
+//                            .foregroundColor(.red)
+//                        Text("all")
+//
+//                    }
+                }
             )
             .sheet(isPresented: $showNewEntrySheet, onDismiss: {
                 viewModel.loadEntries()
@@ -58,6 +69,7 @@ struct ContentView: View {
             }
         }
     }
+    
     func deleteEntry(at offsets: IndexSet) {
         for index in offsets {
             let entry = viewModel.entries[index]
@@ -65,6 +77,7 @@ struct ContentView: View {
         }
     }
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
