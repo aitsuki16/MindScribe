@@ -11,7 +11,7 @@ import PencilKit
 
 class EntryDetailViewModel: ObservableObject {
     
-    private let dataManager: DataManager
+    private let dataManager: DataManager = DataManager()
     @Published var entry: DiaryEntry
     @Published var entryMode: EntryMode = .handwriting
     @Published var drawing: PKDrawing = PKDrawing()
@@ -21,7 +21,6 @@ class EntryDetailViewModel: ObservableObject {
     init(entry: DiaryEntry, dataManager: DataManager) {
         self.entry = entry
         self.text = entry.text ?? ""
-        self.dataManager = dataManager
         if let handwritingData = entry.handwritingData {
             do {
                 self.drawing = try PKDrawing(data: handwritingData)
@@ -43,7 +42,7 @@ class EntryDetailViewModel: ObservableObject {
             } else {
                 entry.handwritingData = drawing.dataRepresentation()
             }
-            dataManager.save(diary: entry)
+            CoreDataRepository.shared.save(item: entry)
             isEditing = false
             entry.date = Date()
         }
