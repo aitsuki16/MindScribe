@@ -44,17 +44,6 @@ struct ContentView: View {
                         Image(systemName: "plus")
                             .foregroundColor(.mint)
                     }
-                
-                //when wanting to delete all
-//                    Button(action: {
-//                        CoreDataRepository.shared.deleteAllEntries()
-//                        viewModel.loadEntries()
-//                    }) {
-//                        Image(systemName: "trash")
-//                            .foregroundColor(.red)
-//                        Text("all")
-//
-//                    }
                 }
             )
             .sheet(isPresented: $showNewEntrySheet, onDismiss: {

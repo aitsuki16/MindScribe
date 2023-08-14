@@ -51,7 +51,6 @@ struct EntryDetailView: View {
             }
             .background(Color("3"))
             .buttonStyle(.bordered)
-            //.controlSize(.regular)
             .cornerRadius(10)
         }
         HStack {

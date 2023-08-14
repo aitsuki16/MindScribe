@@ -74,16 +74,5 @@ class CoreDataRepository {
             print("Could not save context. \(error), \(error.userInfo)")
         }
     }
-    //when to delete all entries
-    //    func deleteAllEntries() {
-    //        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = DiaryEntry.fetchRequest()
-    //        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-    //
-    //        do {
-    //            try container.viewContext.execute(batchDeleteRequest)
-    //        } catch {
-    //            print("Error deleting all entries: \(error)")
-    //        }
-    //    }
     
 }
