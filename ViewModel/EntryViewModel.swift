@@ -38,10 +38,6 @@ class EntryViewModel: ObservableObject {
         loadEntries()
     }
     
-    func saveEntry(entry: DiaryEntry) {
-        dataManager.save(diary: entry)
-    }
-    
     func loadEntries() {
         entries = dataManager.loadDiaryEntries()
     }
