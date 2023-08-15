@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var showNewEntrySheet = false
     var body: some View {
         NavigationView {
+            
             List {
                 ForEach(viewModel.entries, id: \.id) { entry in
                     NavigationLink(destination: EntryDetailView(isPresented: $showNewEntrySheet, viewModel: EntryDetailViewModel(entry: entry, dataManager: viewModel.dataManager))) {

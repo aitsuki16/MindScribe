@@ -29,6 +29,7 @@ class EntryDetailViewModel: ObservableObject {
             } catch {
                 print("Failed to load handwriting data: \(error)")
             }
+            
         } else {
             self.entryMode = .text
         }
