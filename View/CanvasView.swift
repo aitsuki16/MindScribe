@@ -25,10 +25,8 @@ struct CanvasView: UIViewRepresentable {
         if let tmpDrawing = context.coordinator.tmpDrawing {
             uiView.drawing = tmpDrawing
             context.coordinator.tmpDrawing = nil
-            print("updateUIView with data size: \(uiView.drawing.dataRepresentation().count)")
         } else {
             uiView.drawing = drawing
-            print("updateUIView with data size: \(uiView.drawing.dataRepresentation().count)")
         }
     }
     
@@ -43,15 +41,6 @@ struct CanvasView: UIViewRepresentable {
         init(_ parent: CanvasView) {
             self.parent = parent
         }
-        
-//        func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
-//            DispatchQueue.main.async {
-//                let newDrawing = canvasView.drawing
-//                if newDrawing != self.parent.drawing {
-//                    self.parent.drawing = newDrawing
-//                }
-//            }
-//        }
 
         func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
             Task {
@@ -63,7 +52,7 @@ struct CanvasView: UIViewRepresentable {
         }
 
         func canvasViewDidEndUsingTool(_ canvasView: PKCanvasView) {
-            print("Drawing ended with data size: \(canvasView.drawing.dataRepresentation().count)")
+            
         }
     }
 }

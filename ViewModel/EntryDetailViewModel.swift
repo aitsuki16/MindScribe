@@ -26,10 +26,10 @@ class EntryDetailViewModel: ObservableObject {
                 self.drawing = try PKDrawing(data: handwritingData)
                 self.entryMode = .handwriting
                 
-                print("Loaded drawing with data size: \(handwritingData.count)")
             } catch {
                 print("Failed to load handwriting data: \(error)")
             }
+            
         } else {
             self.entryMode = .text
         }
