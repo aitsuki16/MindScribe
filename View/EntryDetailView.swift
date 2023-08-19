@@ -7,13 +7,17 @@
 import SwiftUI
 import PencilKit
 
+enum Tool: Hashable {
+    case pen, pencil, eraser
+}
+
 struct EntryDetailView: View {
     @State private var edit = false
-
     @ObservedObject var viewModel: EntryDetailViewModel
     @Environment(\.presentationMode) var presentationMode
-
     @Binding var isPresented: Bool
+    
+    @State private var selectedTool: Tool = .pencil
 
     init(isPresented: Binding<Bool>, viewModel: EntryDetailViewModel) {
         self._isPresented = isPresented
@@ -21,14 +25,24 @@ struct EntryDetailView: View {
     }
 
     var body: some View {
+
         VStack {
+            HStack {
+                
+                ToolSelectionButton(tool: .pen, selectedTool: $selectedTool)
+                ToolSelectionButton(tool: .pencil, selectedTool: $selectedTool)
+                ToolSelectionButton(tool: .eraser, selectedTool: $selectedTool)
+
+                .padding()
+            }
+
             if viewModel.entryMode == .text {
                 TextEditor(text: $viewModel.text)
                     .padding()
                     .disabled(!edit)
             } else {
                 if !viewModel.drawing.bounds.isEmpty {
-                    CanvasView(drawing: $viewModel.drawing)
+                    CanvasView(drawing: $viewModel.drawing, selectedTool: $selectedTool)
                         .frame(width: UIScreen.main.bounds.width - 40, height: 500)
                         .border(Color.gray)
                         .padding(10)
@@ -39,7 +53,7 @@ struct EntryDetailView: View {
                     Text("No Drawing Available")
                 }
             }
-    
+
             Button(action: {
                 viewModel.saveDiary()
                 presentationMode.wrappedValue.dismiss()
@@ -54,19 +68,16 @@ struct EntryDetailView: View {
             .cornerRadius(10)
         }
         HStack {
- 
             Toggle(isOn: $edit, label: {
                 Text("Edit")
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .foregroundColor(Color("3"))
                     .bold()
-
             })
-
             .toggleStyle(SwitchToggleStyle(tint: Color("3")))
             .toggleStyle(SwitchToggleStyle(tint: .cyan))
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 18))
-                .onChange(of: edit) { newValue in
+            .onChange(of: edit) { newValue in
                 viewModel.isEditing = newValue
             }
         }
