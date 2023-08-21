@@ -14,7 +14,7 @@ struct EntryDetailView: View {
   @ObservedObject var viewModel: EntryDetailViewModel
   @Environment(\.presentationMode) var presentationMode
   @Binding var isPresented: Bool
-  @State private var selectedTool: Tool = .pencil
+  @State private var selectedTool: Tool = .pen
   init(isPresented: Binding<Bool>, viewModel: EntryDetailViewModel) {
     self._isPresented = isPresented
     self.viewModel = viewModel

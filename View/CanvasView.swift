@@ -41,6 +41,18 @@ struct CanvasView: UIViewRepresentable {
         } else {
             uiView.drawing = drawing
         }
+        
+        switch selectedTool {
+            case .pen:
+                print("Selected Tool: Pen")
+                uiView.tool = PKInkingTool(.pen, color: .black, width: 3)
+            case .pencil:
+                print("Selected Tool: Pencil")
+                uiView.tool = PKInkingTool(.pencil, color: .blue, width: 3)
+            case .eraser:
+                print("Selected Tool: Eraser")
+                uiView.tool = PKEraserTool(.bitmap)
+        }
     }
     
     func makeCoordinator() -> Coordinator {
