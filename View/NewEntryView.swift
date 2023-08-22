@@ -11,21 +11,24 @@ struct NewEntryView: View {
   @Binding var isPresented: Bool
   @StateObject var viewModel: EntryViewModel = EntryViewModel()
   var onCancel: () -> Void
-  @State private var selectedTool: Tool = .pen // Initialize with your desired default tool
+  @State private var selectedTool: Tool = .pen
   var body: some View {
     NavigationView {
       VStack(alignment: .center) {
         Text("New Entry")
-          .font(.largeTitle)
+              .font(.headline)
           .foregroundColor(.cyan)
           .padding()
         CustomSegmentedControl(selection: $viewModel.entryMode)
-        // Display the buttons for tool selection at the top of the view
-        HStack {
-          ToolSelectionButton(tool: .pen, selectedTool: $selectedTool)
-          ToolSelectionButton(tool: .pencil, selectedTool: $selectedTool)
-          ToolSelectionButton(tool: .eraser, selectedTool: $selectedTool)
-        }
+          
+          if viewModel.entryMode == .handwriting {
+              HStack {
+                ToolSelectionButton(tool: .pen, selectedTool: $selectedTool)
+                ToolSelectionButton(tool: .pencil, selectedTool: $selectedTool)
+                ToolSelectionButton(tool: .eraser, selectedTool: $selectedTool)
+              }
+          }
+   
         if viewModel.entryMode == .text {
           TextEditor(text: $viewModel.newEntryText)
             .frame(width: UIScreen.main.bounds.width - 40, height: 250)
@@ -44,14 +47,16 @@ struct NewEntryView: View {
           isPresented = false
         }) {
           Text("Save")
-            .font(.title3)
+                .font(.title)
             .foregroundColor(.indigo)
+            .frame(width: 50,height: 50)
         }
         .tint(Color("1"))
         .buttonStyle(.borderedProminent)
         .buttonBorderShape(.roundedRectangle)
         .controlSize(.regular)
       }
+        Spacer()
       .navigationBarItems(trailing: Button("Cancel", action: {
         onCancel()
       }))

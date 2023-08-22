@@ -21,12 +21,15 @@ struct EntryDetailView: View {
   }
   var body: some View {
     VStack {
-      HStack {
-        ToolSelectionButton(tool: .pen, selectedTool: $selectedTool)
-        ToolSelectionButton(tool: .pencil, selectedTool: $selectedTool)
-        ToolSelectionButton(tool: .eraser, selectedTool: $selectedTool)
-        .padding()
-      }
+        if viewModel.entryMode == .handwriting {
+            HStack {
+              ToolSelectionButton(tool: .pen, selectedTool: $selectedTool)
+              ToolSelectionButton(tool: .pencil, selectedTool: $selectedTool)
+              ToolSelectionButton(tool: .eraser, selectedTool: $selectedTool)
+              .padding()
+            }
+        }
+ 
       if viewModel.entryMode == .text {
         TextEditor(text: $viewModel.text)
           .padding()
