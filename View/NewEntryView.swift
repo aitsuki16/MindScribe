@@ -15,10 +15,7 @@ struct NewEntryView: View {
   var body: some View {
     NavigationView {
       VStack(alignment: .center) {
-        Text("New Entry")
-              .font(.headline)
-          .foregroundColor(.cyan)
-          .padding()
+       
         CustomSegmentedControl(selection: $viewModel.entryMode)
           
           if viewModel.entryMode == .handwriting {
@@ -26,6 +23,7 @@ struct NewEntryView: View {
                 ToolSelectionButton(tool: .pen, selectedTool: $selectedTool)
                 ToolSelectionButton(tool: .pencil, selectedTool: $selectedTool)
                 ToolSelectionButton(tool: .eraser, selectedTool: $selectedTool)
+        
               }
           }
    
@@ -47,16 +45,14 @@ struct NewEntryView: View {
           isPresented = false
         }) {
           Text("Save")
-                .font(.title)
             .foregroundColor(.indigo)
-            .frame(width: 50,height: 50)
+            .frame(width: 50,height: 20)
         }
         .tint(Color("1"))
         .buttonStyle(.borderedProminent)
         .buttonBorderShape(.roundedRectangle)
         .controlSize(.regular)
       }
-        Spacer()
       .navigationBarItems(trailing: Button("Cancel", action: {
         onCancel()
       }))
