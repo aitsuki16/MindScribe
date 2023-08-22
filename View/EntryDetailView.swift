@@ -26,7 +26,6 @@ struct EntryDetailView: View {
               ToolSelectionButton(tool: .pen, selectedTool: $selectedTool)
               ToolSelectionButton(tool: .pencil, selectedTool: $selectedTool)
               ToolSelectionButton(tool: .eraser, selectedTool: $selectedTool)
-              .padding()
             }
         }
  

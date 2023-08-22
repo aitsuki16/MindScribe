@@ -20,13 +20,13 @@ struct CanvasView: UIViewRepresentable {
         
         switch selectedTool {
             case .pen:
-                print("Selected Tool: Pen")
+                print("Selected Tool: Pen from makeui")
                 canvasView.tool = PKInkingTool(.pen, color: .black, width: 3)
             case .pencil:
-                print("Selected Tool: Pencil")
+                print("Selected Tool: Pencil from make ui")
                 canvasView.tool = PKInkingTool(.pencil, color: .blue, width: 3)
             case .eraser:
-                print("Selected Tool: Eraser")
+                print("Selected Tool: Eraser from makeui")
             canvasView.tool = PKEraserTool(.bitmap)
             }
         
@@ -44,13 +44,13 @@ struct CanvasView: UIViewRepresentable {
         
         switch selectedTool {
             case .pen:
-                print("Selected Tool: Pen")
+                print("Selected Tool: Pen from updateui")
                 uiView.tool = PKInkingTool(.pen, color: .black, width: 3)
             case .pencil:
-                print("Selected Tool: Pencil")
+                print("Selected Tool: Pencil from update ui")
                 uiView.tool = PKInkingTool(.pencil, color: .blue, width: 3)
             case .eraser:
-                print("Selected Tool: Eraser")
+                print("Selected Tool: Eraser from update ui")
                 uiView.tool = PKEraserTool(.bitmap)
         }
     }
