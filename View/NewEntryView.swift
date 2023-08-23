@@ -31,7 +31,7 @@ struct NewEntryView: View {
               TextEditor(text: $viewModel.newEntryText)
                   .frame(maxWidth: 400, maxHeight: 250)
                   .padding(8)
-                  .background(LinearGradient(gradient: Gradient(colors: [.cyan, .indigo]), startPoint: .top, endPoint: .bottom))
+                  .background(LinearGradient(gradient: Gradient(colors: [.gray, .indigo]), startPoint: .top, endPoint: .bottom))
                   .opacity(0.8)
           } else {
                   CanvasView(drawing: $viewModel.drawing, selectedTool: $selectedTool)

@@ -21,6 +21,7 @@ struct ContentView: View {
                         if let txt = entry.text {
                             if txt.count > 15 {
                                 Text(String(txt.prefix(15)) + " ...")
+                                
                             } else {
                                 Text(txt)
                             }
@@ -28,22 +29,31 @@ struct ContentView: View {
                             Text("")
                         }
                     }
-                    .listRowBackground(Color("1"))
+                    .listRowBackground(Color("5"))
+
                 }
+
+
                 
                 .onMove { indexSet, index in
                     viewModel.entries.move(fromOffsets: indexSet, toOffset: index)
                 }
                 .onDelete(perform: deleteEntry)
             }
-            .navigationBarTitle("Diary")
+            .scrollContentBackground(.hidden)
+            .background(LinearGradient(gradient: Gradient(colors: [.indigo, .cyan]), startPoint: .topLeading, endPoint: .bottom))
+            .opacity(0.7)
+            .navigationTitle("MindScribe")
+            .navigationBarTitleDisplayMode(.inline)
+    
+            
             .navigationBarItems(trailing:
                 HStack {
                     Button(action: {
                         showNewEntrySheet = true
                     }) {
                         Image(systemName: "plus")
-                            .foregroundColor(.mint)
+                            .foregroundColor(.white)
                     }
                 }
             )
