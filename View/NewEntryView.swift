@@ -26,20 +26,22 @@ struct NewEntryView: View {
         
               }
           }
-   
-        if viewModel.entryMode == .text {
-          TextEditor(text: $viewModel.newEntryText)
-            .frame(width: UIScreen.main.bounds.width - 40, height: 250)
-            .padding(10)
-            .background(LinearGradient(gradient: Gradient(colors: [.cyan, .indigo]), startPoint: .top, endPoint: .bottom))
-            .opacity(0.8)
-        } else {
-          CanvasView(drawing: $viewModel.drawing, selectedTool: $selectedTool)
-            .frame(width: UIScreen.main.bounds.width - 40, height: 500)
-            .padding(10)
-            .background(LinearGradient(gradient: Gradient(colors: [.indigo, .cyan]), startPoint: .top, endPoint: .bottom))
-            .opacity(0.7)
-        }
+
+          if viewModel.entryMode == .text {
+              TextEditor(text: $viewModel.newEntryText)
+                  .frame(maxWidth: 400, maxHeight: 250)
+                  .padding(8)
+                  .background(LinearGradient(gradient: Gradient(colors: [.cyan, .indigo]), startPoint: .top, endPoint: .bottom))
+                  .opacity(0.8)
+          } else {
+                  CanvasView(drawing: $viewModel.drawing, selectedTool: $selectedTool)
+                  .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+                      .padding(8)
+                      .background(LinearGradient(gradient: Gradient(colors: [.indigo, .cyan]), startPoint: .top, endPoint: .bottom))
+                      .opacity(0.7)
+          }
+
         Button(action: {
           viewModel.saveEntry()
           isPresented = false
@@ -48,11 +50,13 @@ struct NewEntryView: View {
             .foregroundColor(.indigo)
             .frame(width: 50,height: 20)
         }
+        .padding()
         .tint(Color("1"))
         .buttonStyle(.borderedProminent)
         .buttonBorderShape(.roundedRectangle)
         .controlSize(.regular)
       }
+      .padding()
       .navigationBarItems(trailing: Button("Cancel", action: {
         onCancel()
       }))
