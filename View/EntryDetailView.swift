@@ -31,14 +31,20 @@ struct EntryDetailView: View {
  
       if viewModel.entryMode == .text {
         TextEditor(text: $viewModel.text)
-          .padding()
+              .frame(maxWidth: 400, maxHeight: 300)
+              .padding(8)
+              .background(LinearGradient(gradient: Gradient(colors: [.indigo, .gray]), startPoint: .top, endPoint: .bottom))
+              .opacity(0.8)
           .disabled(!edit)
+         // .padding()
+
       } else {
         if !viewModel.drawing.bounds.isEmpty {
           CanvasView(drawing: $viewModel.drawing, selectedTool: $selectedTool)
-            .frame(width: UIScreen.main.bounds.width - 40, height: 500)
+            .frame(maxWidth: 500, maxHeight: 500)
+
             .border(Color.gray)
-            .padding(10)
+            .padding(8)
             .background(LinearGradient(gradient: Gradient(colors: [.gray, .blue]), startPoint: .top, endPoint: .bottom))
             .opacity(0.7)
             .disabled(!edit)
@@ -58,7 +64,7 @@ struct EntryDetailView: View {
       .background(Color("3"))
       .buttonStyle(.bordered)
       .cornerRadius(10)
-    }
+    
     HStack {
       Toggle(isOn: $edit, label: {
         Text("Edit")
@@ -66,6 +72,8 @@ struct EntryDetailView: View {
           .foregroundColor(Color("3"))
           .bold()
       })
+        
+    }
       .toggleStyle(SwitchToggleStyle(tint: Color("3")))
       .toggleStyle(SwitchToggleStyle(tint: .cyan))
       .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 18))
@@ -73,5 +81,6 @@ struct EntryDetailView: View {
         viewModel.isEditing = newValue
       }
     }
+    .padding()
   }
 }
