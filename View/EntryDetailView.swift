@@ -36,8 +36,6 @@ struct EntryDetailView: View {
               .background(LinearGradient(gradient: Gradient(colors: [.indigo, .gray]), startPoint: .top, endPoint: .bottom))
               .opacity(0.8)
           .disabled(!edit)
-         // .padding()
-
       } else {
         if !viewModel.drawing.bounds.isEmpty {
           CanvasView(drawing: $viewModel.drawing, selectedTool: $selectedTool)
