@@ -13,7 +13,7 @@ struct NewEntryView: View {
   @StateObject var viewModel: EntryViewModel = EntryViewModel()
   var onCancel: () -> Void
   @State private var selectedTool: Tool = .pen
-  @State private var penColor: Color = .black // Initialize with a default color
+  @State private var toolColor: Color = .black // Initialize with a default color
   var body: some View {
     NavigationView {
       VStack(alignment: .center) {
@@ -36,15 +36,14 @@ struct NewEntryView: View {
                   .background(LinearGradient(gradient: Gradient(colors: [.gray, .indigo]), startPoint: .top, endPoint: .bottom))
                   .opacity(0.8)
           } else {
-              CanvasView(drawing: $viewModel.drawing, selectedTool: $selectedTool, penColor: $penColor)
+              CanvasView(drawing: $viewModel.drawing, selectedTool: $selectedTool, toolColor: $toolColor)
 
                   .frame(maxWidth: .infinity, maxHeight: .infinity)
 
                       .padding(8)
                       .background(LinearGradient(gradient: Gradient(colors: [.indigo, .cyan]), startPoint: .top, endPoint: .bottom))
                       .opacity(0.7)
-              ColorPicker("Pen Color", selection: $penColor) 
-                  .padding()
+              ColorPicker("Color", selection: $toolColor) 
           }
 
         Button(action: {
