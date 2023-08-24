@@ -10,6 +10,8 @@ enum Tool: Hashable {
   case pen, pencil, eraser
 }
 struct EntryDetailView: View {
+    
+  @State private var penColor: Color = .black
   @State private var edit = false
   @ObservedObject var viewModel: EntryDetailViewModel
   @Environment(\.presentationMode) var presentationMode
@@ -38,7 +40,7 @@ struct EntryDetailView: View {
           .disabled(!edit)
       } else {
         if !viewModel.drawing.bounds.isEmpty {
-          CanvasView(drawing: $viewModel.drawing, selectedTool: $selectedTool)
+            CanvasView(drawing: $viewModel.drawing, selectedTool: $selectedTool, penColor: $penColor)
             .frame(maxWidth: 500, maxHeight: 500)
 
             .border(Color.gray)
