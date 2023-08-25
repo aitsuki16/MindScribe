@@ -10,6 +10,8 @@ enum Tool: Hashable {
   case pen, pencil, eraser
 }
 struct EntryDetailView: View {
+    
+  @State private var toolColor: Color = .black
   @State private var edit = false
   @ObservedObject var viewModel: EntryDetailViewModel
   @Environment(\.presentationMode) var presentationMode
@@ -36,11 +38,9 @@ struct EntryDetailView: View {
               .background(LinearGradient(gradient: Gradient(colors: [.indigo, .gray]), startPoint: .top, endPoint: .bottom))
               .opacity(0.8)
           .disabled(!edit)
-         // .padding()
-
       } else {
         if !viewModel.drawing.bounds.isEmpty {
-          CanvasView(drawing: $viewModel.drawing, selectedTool: $selectedTool)
+            CanvasView(drawing: $viewModel.drawing, selectedTool: $selectedTool, toolColor: $toolColor)
             .frame(maxWidth: 500, maxHeight: 500)
 
             .border(Color.gray)

@@ -13,22 +13,12 @@ struct CanvasView: UIViewRepresentable {
     @Binding var drawing: PKDrawing
     var tmpDrawing: PKDrawing? = nil
     @Binding var selectedTool: Tool
+    @Binding var toolColor: Color // pen color selection
+
 
     func makeUIView(context: Context) -> PKCanvasView {
         let canvasView = PKCanvasView()
         canvasView.drawingPolicy = .anyInput
-        
-        switch selectedTool {
-            case .pen:
-                print("Selected Tool: Pen from makeui")
-                canvasView.tool = PKInkingTool(.pen, color: .black, width: 3)
-            case .pencil:
-                print("Selected Tool: Pencil from make ui")
-                canvasView.tool = PKInkingTool(.pencil, color: .blue, width: 3)
-            case .eraser:
-                print("Selected Tool: Eraser from makeui")
-            canvasView.tool = PKEraserTool(.bitmap)
-            }
         
         canvasView.delegate = context.coordinator
         return canvasView
@@ -45,10 +35,12 @@ struct CanvasView: UIViewRepresentable {
         switch selectedTool {
             case .pen:
                 print("Selected Tool: Pen from updateui")
-                uiView.tool = PKInkingTool(.pen, color: .black, width: 3)
+                let uiColor = UIColor(toolColor)
+                uiView.tool = PKInkingTool(.pen, color: uiColor, width: 3)
             case .pencil:
-                print("Selected Tool: Pencil from update ui")
-                uiView.tool = PKInkingTool(.pencil, color: .blue, width: 3)
+                let uiColor = UIColor(toolColor)
+            print("Selected Tool: Pencil from update ui")
+                uiView.tool = PKInkingTool(.pencil, color: uiColor, width: 3)
             case .eraser:
                 print("Selected Tool: Eraser from update ui")
                 uiView.tool = PKEraserTool(.bitmap)
