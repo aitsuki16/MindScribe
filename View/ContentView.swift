@@ -12,28 +12,34 @@ struct ContentView: View {
 
     @StateObject var viewModel: ContentViewModel = ContentViewModel()
     @State private var showNewEntrySheet = false
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+       // formatter.locale = Locale(identifier: "ja_JP")
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        return formatter
+    }()
+
     var body: some View {
         NavigationView {
-            
             List {
-                ForEach(viewModel.entries, id: \.id) { entry in
+                ForEach(viewModel.entries) { entry in
                     NavigationLink(destination: EntryDetailView(isPresented: $showNewEntrySheet, viewModel: EntryDetailViewModel(entry: entry, dataManager: viewModel.dataManager))) {
-                        if let txt = entry.text {
-                            if txt.count > 15 {
-                                Text(String(txt.prefix(15)) + " ...")
-                                
-                            } else {
-                                Text(txt)
+                        VStack(alignment: .leading) {
+                            Text(entry.text ?? "")
+                                .font(.headline)
+                            if let date = entry.date {
+                                Text(dateFormatter.string(from: date))
+                                    .foregroundColor(.secondary)
+                                    .font(.footnote)
                             }
-                        } else {
-                            Text("")
+
                         }
+                        .padding(.vertical, 8)
                     }
                     .listRowBackground(Color("5"))
-
                 }
-
-
                 
                 .onMove { indexSet, index in
                     viewModel.entries.move(fromOffsets: indexSet, toOffset: index)
@@ -46,7 +52,6 @@ struct ContentView: View {
             .navigationTitle("MindScribe")
             .navigationBarTitleDisplayMode(.inline)
     
-            
             .navigationBarItems(trailing:
                 HStack {
                     Button(action: {
@@ -63,6 +68,8 @@ struct ContentView: View {
                 NewEntryView(isPresented: $showNewEntrySheet, onCancel: {
                     showNewEntrySheet = false
                 })
+                .accentColor(Color.blue)
+
             }
             .onAppear {
                 viewModel.loadEntries()
@@ -83,3 +90,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
