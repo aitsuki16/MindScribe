@@ -55,7 +55,8 @@ class EntryViewModel: ObservableObject {
         for stroke in drawing.strokes {
             rainbowStrokes.append(contentsOf: stroke.rainbowStroke())
         }
-        
+
         drawing = PKDrawing(strokes: rainbowStrokes)
+        self.objectWillChange.send()
     }
 }

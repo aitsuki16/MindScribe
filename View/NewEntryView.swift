@@ -44,6 +44,8 @@ struct NewEntryView: View {
                     ColorPicker("Color", selection: $toolColor)
                     Button(action: {
                         viewModel.applyRainbowStroke()
+                        selectedTool = .pen
+                        toolColor = .black // Reset to default
                     }) {
                         Text("Apply Rainbow")
                             .foregroundColor(.indigo)

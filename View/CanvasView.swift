@@ -93,7 +93,7 @@ extension PKStroke {
             while t <= end {
                 let point = self.path.interpolatedPoint(at: t)
                 subpoints.append(point)
-                t += segmentLength / CGFloat(100) // incrementally sample 100 points between start and end
+                t += segmentLength / CGFloat(100)
             }
 
             let subpath = PKStrokePath(controlPoints: subpoints, creationDate: Date())
