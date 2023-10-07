@@ -49,4 +49,13 @@ class EntryViewModel: ObservableObject {
         }
         newEntryText = ""
     }
+    
+    func applyRainbowStroke() {
+        var rainbowStrokes: [PKStroke] = []
+        for stroke in drawing.strokes {
+            rainbowStrokes.append(contentsOf: stroke.rainbowStroke())
+        }
+        
+        drawing = PKDrawing(strokes: rainbowStrokes)
+    }
 }

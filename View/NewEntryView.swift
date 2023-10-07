@@ -24,7 +24,6 @@ struct NewEntryView: View {
                         ToolSelectionButton(tool: .pen, selectedTool: $selectedTool)
                         ToolSelectionButton(tool: .pencil, selectedTool: $selectedTool)
                         ToolSelectionButton(tool: .eraser, selectedTool: $selectedTool)
-                        
                     }
                 }
                 
@@ -43,6 +42,14 @@ struct NewEntryView: View {
                         .background(LinearGradient(gradient: Gradient(colors: [.indigo, .cyan]), startPoint: .top, endPoint: .bottom))
                         .opacity(0.7)
                     ColorPicker("Color", selection: $toolColor)
+                    Button(action: {
+                        viewModel.applyRainbowStroke()
+                    }) {
+                        Text("Apply Rainbow")
+                            .foregroundColor(.indigo)
+                    }
+                    .padding()
+                    .buttonStyle(.borderedProminent)
                 }
                 
                 Button(action: {
