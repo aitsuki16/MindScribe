@@ -74,3 +74,34 @@ struct CanvasView: UIViewRepresentable {
         }
     }
 }
+
+extension PKStroke {
+    func rainbowStroke() -> [PKStroke] {
+        let rainbowColors: [UIColor] = [
+            .red, .orange, .yellow, .green, .blue
+        ]
+
+        var newStrokes: [PKStroke] = []
+        let segmentLength = 1.0 / CGFloat(rainbowColors.count)
+
+        for (index, color) in rainbowColors.enumerated() {
+            let start = CGFloat(index) * segmentLength
+            let end = CGFloat(index + 1) * segmentLength
+            
+            var subpoints: [PKStrokePoint] = []
+            var t = start
+            while t <= end {
+                let point = self.path.interpolatedPoint(at: t)
+                subpoints.append(point)
+                t += segmentLength / CGFloat(100) // incrementally sample 100 points between start and end
+            }
+
+            let subpath = PKStrokePath(controlPoints: subpoints, creationDate: Date())
+            let newInk = PKInk(.pen, color: color)
+            let newStroke = PKStroke(ink: newInk, path: subpath, transform: self.transform, mask: nil)
+            newStrokes.append(newStroke)
+        }
+
+        return newStrokes
+    }
+}
