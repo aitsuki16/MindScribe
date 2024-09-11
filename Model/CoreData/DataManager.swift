@@ -1,10 +1,3 @@
-//
-//  DataManager.swift
-//  mindScribe
-//
-//  Created by apple on 2023/07/16.
-//
-
 import Foundation
 
 class DataManager {
