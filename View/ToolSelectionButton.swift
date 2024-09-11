@@ -1,10 +1,3 @@
-//
-//  ToolSelectionButton.swift
-//  mindScribe
-//
-//  Created by user on 2023/08/19.
-//
-
 import SwiftUI
 
 struct ToolSelectionButton: View {
