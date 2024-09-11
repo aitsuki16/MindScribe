@@ -1,10 +1,3 @@
-//
-//  PersistenceController.swift
-//  mindScribe
-//
-//  Created by user on 2023/06/11.
-//
-
 import Foundation
 import CoreData
 // Repofetch data and save data
