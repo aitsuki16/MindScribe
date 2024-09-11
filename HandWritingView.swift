@@ -1,10 +1,3 @@
-//
-//  HandWritingView.swift
-//  mindScribe
-//
-//  Created by user on 2023/06/17.
-//
-
 import SwiftUI
 import PencilKit
 
